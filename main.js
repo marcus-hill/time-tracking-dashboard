@@ -1,9 +1,11 @@
 let timeFrame = "weekly"
 let data = {}
 
+let buttons = document.querySelectorAll('.time-frame')
+
 const populateDOM = () => {
 
-    document.querySelectorAll('.time-frame').forEach(function(timeElement) {
+    buttons.forEach(function(timeElement) {
         if (timeElement.getAttribute('id') === timeFrame + "-time") {
             timeElement.classList.add("time-selected");
         } else {
